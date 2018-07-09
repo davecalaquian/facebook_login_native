@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import axios from 'axios';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 class FacebookLogin extends Component {
     constructor(){
         super();
-
         this.handleLogin = this.handleLogin.bind(this);
     }
     async handleLogin(){
@@ -34,19 +34,16 @@ class FacebookLogin extends Component {
     render() {
         return (
             <View>
-                <TouchableOpacity onPress={this.handleLogin}>
-                    <Text style={styles.buttonStyle}>Login with Facebook</Text>
-                </TouchableOpacity>
+                <Icon.Button 
+                    name="facebook" 
+                    backgroundColor="#3b5998" 
+                    padding={15}
+                    onPress={this.handleLogin}>
+                    Login with Facebook
+                </Icon.Button>
             </View>
         );
     }
 }
 
-const styles = {
-    buttonStyle:{
-        backgroundColor: '#3b5998',
-        padding: 20,
-        color: '#fff'
-    }
-}
 export default FacebookLogin;
