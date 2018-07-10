@@ -17,7 +17,7 @@ class FacebookLogin extends Component {
             // Get the user's name using Facebook's Graph API
             axios({
                 method: 'post',
-                url: 'http://192.168.8.135:4000/api/v1/auth/facebook',
+                url: 'https://thawing-forest-31945.herokuapp.com/api/v1/auth/facebook',
                 headers: {
                   'Access-Control-Allow-Origin': '*',
                   'Authorization': `Bearer ${token}`,
